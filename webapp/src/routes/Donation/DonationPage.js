@@ -97,7 +97,7 @@ const DonationPage = () => {
     { data: { profile: { profile } = {} } = {}, client }
   ] = useLazyQuery(PROFILE_QUERY, { fetchPolicy: 'network-only' })
 
-  const tokens = profile?.balance.length
+  const tokens = 0
     ? profile.balance.join(',').split(' ')[0]
     : 0
 

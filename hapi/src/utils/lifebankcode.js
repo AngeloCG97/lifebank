@@ -1,8 +1,8 @@
 const eosUtil = require('./eos')
+const { eosConfig } = require('../config')
 
-const CONTRACT_NAME = 'lifebankcode' // @todo: use ENV
-const COMMUNITY_ASSET = '0 LIFE' // @todo: use ENV
-
+const CONTRACT_NAME = eosConfig.lifebankCodeContractName
+const COMMUNITY_ASSET = `0 ${eosConfig.communityAsset}`
 const addDonor = (account, password) => {
   return eosUtil.transact(
     [
@@ -115,6 +115,7 @@ const addSponsor = (account, password, { name, geolocation, ...profile }) => {
 }
 
 const getDonor = async account => {
+  console.log("print contract:", CONTRACT_NAME)
   const { rows = [] } = await eosUtil.getTableRows({
     scope: CONTRACT_NAME,
     code: CONTRACT_NAME,
@@ -129,6 +130,7 @@ const getDonor = async account => {
 }
 
 const getLifebank = async account => {
+  console.log("Contract_name: ", CONTRACT_NAME)
   const { rows = [] } = await eosUtil.getTableRows({
     scope: CONTRACT_NAME,
     code: CONTRACT_NAME,

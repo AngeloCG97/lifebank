@@ -189,16 +189,16 @@ const TokenTransfer = ({ overrideBoxClass, overrideLabelClass, useButton }) => {
                 Redeem Token
               </Button>
             ) : (
-              <>
-                <SendIcon className={classes.iconOption} />
-                <Typography
-                  variant="body1"
-                  className={clsx(classes.labelOption, overrideLabelClass)}
-                >
-                  Transfer
+                <>
+                  <SendIcon className={classes.iconOption} />
+                  <Typography
+                    variant="body1"
+                    className={clsx(classes.labelOption, overrideLabelClass)}
+                  >
+                    Transfer
                 </Typography>
-              </>
-            )}
+                </>
+              )}
           </Box>
           <Modal
             aria-labelledby="transition-modal-title"
@@ -227,7 +227,7 @@ const TokenTransfer = ({ overrideBoxClass, overrideLabelClass, useButton }) => {
                 <Box className={classes.bodyWrapper}>
                   <Typography variant="h1">{`${
                     currentUser.role === 'donor' ? 'Redeem' : 'Send'
-                  } Life Token`}</Typography>
+                    } Life Token`}</Typography>
                   {errorMessage && (
                     <Alert
                       className={classes.alert}
@@ -263,7 +263,7 @@ const TokenTransfer = ({ overrideBoxClass, overrideLabelClass, useButton }) => {
                     >
                       Done{' '}
                       <Link
-                        href={`https://jungle.bloks.io/transaction/${transferResult.transaction_id}`}
+                        href={`https://jungle3.bloks.io/transaction/${transferResult.transaction_id}`}
                         target="_blank"
                         rel="noopener"
                         color="secondary"
@@ -277,7 +277,7 @@ const TokenTransfer = ({ overrideBoxClass, overrideLabelClass, useButton }) => {
                       {loadingQr && (
                         <QrReader
                           delay={100}
-                          onError={() => {}}
+                          onError={() => { }}
                           facingMode="rear"
                           style={{
                             height: 300,
@@ -296,7 +296,7 @@ const TokenTransfer = ({ overrideBoxClass, overrideLabelClass, useButton }) => {
                         <>
                           <Typography variant="h4">{`Tokens to ${
                             currentUser.role === 'donor' ? 'Redeem' : 'Send'
-                          }:`}</Typography>
+                            }:`}</Typography>
                           <Box className={classes.AddInput}>
                             <IconButton
                               aria-label="close"

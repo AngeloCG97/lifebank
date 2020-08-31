@@ -26,8 +26,14 @@
         },
         "url": {
           "raw": "{{SERVER}}/v1/wallet/create",
-          "host": ["{{SERVER}}"],
-          "path": ["v1", "wallet", "create"]
+          "host": [
+            "{{SERVER}}"
+          ],
+          "path": [
+            "v1",
+            "wallet",
+            "create"
+          ]
         }
       },
       "response": []
@@ -46,8 +52,14 @@
         },
         "url": {
           "raw": "{{SERVER}}/v1/wallet/create_key",
-          "host": ["{{SERVER}}"],
-          "path": ["v1", "wallet", "create_key"]
+          "host": [
+            "{{SERVER}}"
+          ],
+          "path": [
+            "v1",
+            "wallet",
+            "create_key"
+          ]
         }
       },
       "response": []
@@ -73,8 +85,14 @@
         },
         "url": {
           "raw": "{{SERVER}}/v1/wallet/get_public_keys",
-          "host": ["{{SERVER}}"],
-          "path": ["v1", "wallet", "get_public_keys"]
+          "host": [
+            "{{SERVER}}"
+          ],
+          "path": [
+            "v1",
+            "wallet",
+            "get_public_keys"
+          ]
         }
       },
       "response": []
@@ -100,8 +118,14 @@
         },
         "url": {
           "raw": "{{SERVER}}/v1/wallet/import_key",
-          "host": ["{{SERVER}}"],
-          "path": ["v1", "wallet", "import_key"]
+          "host": [
+            "{{SERVER}}"
+          ],
+          "path": [
+            "v1",
+            "wallet",
+            "import_key"
+          ]
         }
       },
       "response": []
@@ -127,8 +151,14 @@
         },
         "url": {
           "raw": "{{SERVER}}/v1/wallet/list_keys",
-          "host": ["{{SERVER}}"],
-          "path": ["v1", "wallet", "list_keys"]
+          "host": [
+            "{{SERVER}}"
+          ],
+          "path": [
+            "v1",
+            "wallet",
+            "list_keys"
+          ]
         }
       },
       "response": []
@@ -147,8 +177,14 @@
         ],
         "url": {
           "raw": "{{SERVER}}/v1/wallet/list_wallets",
-          "host": ["{{SERVER}}"],
-          "path": ["v1", "wallet", "list_wallets"]
+          "host": [
+            "{{SERVER}}"
+          ],
+          "path": [
+            "v1",
+            "wallet",
+            "list_wallets"
+          ]
         }
       },
       "response": []
@@ -174,8 +210,14 @@
         },
         "url": {
           "raw": "{{SERVER}}/v1/wallet/lock",
-          "host": ["{{SERVER}}"],
-          "path": ["v1", "wallet", "lock"]
+          "host": [
+            "{{SERVER}}"
+          ],
+          "path": [
+            "v1",
+            "wallet",
+            "lock"
+          ]
         }
       },
       "response": []
@@ -201,8 +243,14 @@
         },
         "url": {
           "raw": "{{SERVER}}/v1/wallet/lock_all",
-          "host": ["{{SERVER}}"],
-          "path": ["v1", "wallet", "lock_all"]
+          "host": [
+            "{{SERVER}}"
+          ],
+          "path": [
+            "v1",
+            "wallet",
+            "lock_all"
+          ]
         }
       },
       "response": []
@@ -228,8 +276,14 @@
         },
         "url": {
           "raw": "{{SERVER}}/v1/wallet/open",
-          "host": ["{{SERVER}}"],
-          "path": ["v1", "wallet", "open"]
+          "host": [
+            "{{SERVER}}"
+          ],
+          "path": [
+            "v1",
+            "wallet",
+            "open"
+          ]
         }
       },
       "response": []
@@ -255,8 +309,14 @@
         },
         "url": {
           "raw": "{{SERVER}}/v1/wallet/remove_key",
-          "host": ["{{SERVER}}"],
-          "path": ["v1", "wallet", "remove_key"]
+          "host": [
+            "{{SERVER}}"
+          ],
+          "path": [
+            "v1",
+            "wallet",
+            "remove_key"
+          ]
         }
       },
       "response": []
@@ -282,8 +342,14 @@
         },
         "url": {
           "raw": "{{SERVER}}/v1/wallet/set_timeout",
-          "host": ["{{SERVER}}"],
-          "path": ["v1", "wallet", "set_timeout"]
+          "host": [
+            "{{SERVER}}"
+          ],
+          "path": [
+            "v1",
+            "wallet",
+            "set_timeout"
+          ]
         }
       },
       "response": []
@@ -309,8 +375,14 @@
         },
         "url": {
           "raw": "{{SERVER}}/v1/wallet/sign_digest",
-          "host": ["{{SERVER}}"],
-          "path": ["v1", "wallet", "sign_digest"]
+          "host": [
+            "{{SERVER}}"
+          ],
+          "path": [
+            "v1",
+            "wallet",
+            "sign_digest"
+          ]
         }
       },
       "response": []
@@ -329,8 +401,14 @@
         },
         "url": {
           "raw": "{{SERVER}}/v1/wallet/sign_transaction",
-          "host": ["{{SERVER}}"],
-          "path": ["v1", "wallet", "sign_transaction"]
+          "host": [
+            "{{SERVER}}"
+          ],
+          "path": [
+            "v1",
+            "wallet",
+            "sign_transaction"
+          ]
         }
       },
       "response": []
@@ -356,8 +434,14 @@
         },
         "url": {
           "raw": "{{SERVER}}/v1/wallet/unlock",
-          "host": ["{{SERVER}}"],
-          "path": ["v1", "wallet", "unlock"]
+          "host": [
+            "{{SERVER}}"
+          ],
+          "path": [
+            "v1",
+            "wallet",
+            "unlock"
+          ]
         }
       },
       "response": []
@@ -369,7 +453,9 @@
       "script": {
         "id": "af5aceaa-c626-45d5-a39f-c015de387bfd",
         "type": "text/javascript",
-        "exec": [""]
+        "exec": [
+          ""
+        ]
       }
     },
     {
@@ -377,7 +463,9 @@
       "script": {
         "id": "36e3817e-6853-41f9-bbf9-878fe075b53f",
         "type": "text/javascript",
-        "exec": [""]
+        "exec": [
+          ""
+        ]
       }
     }
   ],

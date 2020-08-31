@@ -10,7 +10,7 @@ const historyApi = require('./history.api')
 const notificationApi = require('./notification.api')
 const userApi = require('./user.api')
 const vaultApi = require('./vault.api')
-const LIFEBANCKCODE_CONTRACT = 'lifebankcode' // @todo: use ENV
+const LIFEBANKCODE_CONTRACT = 'lifebankcode' // @todo: use ENV
 
 const create = async ({ role, username, secret }) => {
   const account = `${role.substring(0, 3)}${username}`.substring(0, 12)
@@ -42,16 +42,19 @@ const getProfile = async account => {
   })
 
   let data = {}
-
+  console.log("user: ", user)
   switch (user.role) {
     case 'donor':
       data = await getDonorData(account)
+      console.log("data: ", data)
       break
     case 'lifebank':
       data = await getLifebankData(account)
+      console.log("data: ", data)
       break
     case 'sponsor':
       data = await getSponsorData(account)
+      console.log("data: ", data)
       break
     default:
       break
@@ -76,14 +79,14 @@ const getDonorData = async account => {
   }
 
   const consent = await consent2lifeUtils.getConsent(
-    LIFEBANCKCODE_CONTRACT,
+    LIFEBANKCODE_CONTRACT,
     account
   )
   const balance = await lifebankcoinUtils.getbalance(account)
   const { email, name } = await userApi.getOne({
     account: { _eq: account }
   })
-
+  console.log("email: ", email)
   return {
     email,
     name,
@@ -94,13 +97,15 @@ const getDonorData = async account => {
 }
 
 const getLifebankData = async account => {
+  console.log("Aconunt: ", account)
   const { tx } = (await lifebankcodeUtils.getLifebank(account)) || {}
   const { lifebank_name: name, ...profile } = await getTransactionData(tx)
   const consent = await consent2lifeUtils.getConsent(
-    LIFEBANCKCODE_CONTRACT,
+    LIFEBANKCODE_CONTRACT,
     account
   )
-
+  console.log("name: ", name)
+  console.log("profile: ", profile)
   return {
     ...profile,
     name,
@@ -122,7 +127,7 @@ const getSponsorData = async account => {
   }
 
   const consent = await consent2lifeUtils.getConsent(
-    LIFEBANCKCODE_CONTRACT,
+    LIFEBANKCODE_CONTRACT,
     account
   )
   const balance = await lifebankcoinUtils.getbalance(account)
@@ -151,7 +156,7 @@ const getTransactionData = async tx => {
 const grantConsent = async account => {
   const password = await vaultApi.getPassword(account)
   const consentTransaction = await consent2lifeUtils.consent(
-    LIFEBANCKCODE_CONTRACT,
+    LIFEBANKCODE_CONTRACT,
     account,
     password
   )
@@ -193,7 +198,7 @@ const login = async ({ account, secret }) => {
 const revokeConsent = async account => {
   const password = await vaultApi.getPassword(account)
   const consentTransaction = await consent2lifeUtils.revoke(
-    LIFEBANCKCODE_CONTRACT,
+    LIFEBANKCODE_CONTRACT,
     account,
     password
   )
